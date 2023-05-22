@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .a {
+        position: relative;
+      }
+      .a:before {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: blue;
+      }
+      .b {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: blue;
+        left: 50%;
+        margin-left: -5px;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="./html2canvas.min.js"></script>
+    <div id="c" style="display: none; width: 320px; height: 320px">
+      <div>
+        <div
+          class="a"
+          style="
+            background: url(./logo.svg) no-repeat;
+            background-size: 200px 20px;
+            background-color: green;
+            color: #fff;
+            border-radius: 10px;
+            padding: 5px 10px;
+          "
+        >
+          hello world 你好
+          <span class="b"></span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const el = document.querySelector('#c')
+      html2canvas(el, {
+        width: 320, //dom 原始宽度
+        height: 320,
+        useCORS: true,
+      }).then(function (canvas) {
+        document.body.appendChild(canvas)
+        // el.remove()
+      })
+    </script>
+  </body>
+</html>
