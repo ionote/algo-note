@@ -51,7 +51,57 @@
 
 ## 实战题目
 
-- [二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)
-- [N叉树的前序遍历](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/description/)
-- [N叉树的层序遍历](https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/)
-- [二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
+- [二叉树的中序遍历](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+- [N叉树的前序遍历](https://leetcode.com/problems/n-ary-tree-preorder-traversal/description/)
+- [N叉树的层序遍历](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)
+- [二叉树的序列化与反序列化](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+
+### 二叉树中序遍历
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+// 迭代
+var inorderTraversal = function(root) {
+    const res = []
+
+    const q = []
+
+    while(root || q.length) {
+        if(root) {
+            q.push(root)
+            root = root.left
+        }else {
+            const t = q.pop()
+            res.push(t.val)
+            root = t.right
+        }
+    }
+    return res
+};
+
+
+// 递归
+var inorderTraversal = function(root) {
+    const res = []
+
+    inorder(root, res)
+    return res
+};
+function inorder(root, res){
+    if(root == null) return
+    inorder(root.left, res)
+    res.push(root.val)
+    inorder(root.right, res)
+}
+```
