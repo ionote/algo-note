@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "cwd": "/media/banli/7221b5fa-fed5-46a1-be21-ecbb47d4765c/《算法训练营》入门篇PPT+源码（教师版）/《算法训练营：海量图解+竞赛刷题》入门篇源码/《算法训练营：海量图解+竞赛刷题》入门篇源码/6.1  图的存储",
+      "program": "/media/banli/7221b5fa-fed5-46a1-be21-ecbb47d4765c/《算法训练营》入门篇PPT+源码（教师版）/《算法训练营：海量图解+竞赛刷题》入门篇源码/《算法训练营：海量图解+竞赛刷题》入门篇源码/6.1  图的存储/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
