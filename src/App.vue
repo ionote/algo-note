@@ -2,11 +2,11 @@
   <ul class="app-menu">
     <li v-for="(route, i) in routes">
       <router-link :to="route.path" v-if="route.name">
-        {{ route.path.slice(1) }}. {{ route.name }}
+        {{ route.name }}
       </router-link>
     </li>
   </ul>
-  <h1>{{ useRoute().path.slice(1) + '. ' + useRoute().name }}</h1>
+  <h1>{{ useRoute().name }}</h1>
   <router-view></router-view>
 </template>
 
