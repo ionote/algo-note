@@ -1,3 +1,8 @@
+<template>
+  <div></div>
+</template>
+
+<script setup>
 // 边集数组
 class Graph {
   constructor() {
@@ -31,3 +36,4 @@ g1.addVertex(8)
 g1.addEdge(0, 2)
 g1.addEdge(2, 1)
 console.log(g1)
+</script>

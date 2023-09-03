@@ -1,3 +1,8 @@
+<template>
+  <div></div>
+</template>
+
+<script setup>
 // 无向图的邻接矩阵表示
 class Graph {
   constructor() {
@@ -104,3 +109,4 @@ console.log(g1)
 
 // g1.bfs()
 g1.dfs()
+</script>
